@@ -19,14 +19,21 @@
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
+    "precommit": "lint-staged",
     "start": "webpack-dev-server",
     "build": "webpack -p",
-    "lint": "tslint --type-check -p tsconfig.json -c tslint.json"
+    "lint": "tslint --type-check -p tsconfig.json -c tslint.json",
+    "prettier:base": "prettier --parser typescript",
+    "prettier:list": "yarn prettier:base --list-different \"src/**/*.{ts,tsx}\"",
+    "prettier:write": "yarn prettier:base --write \"src/**/*.{ts,tsx}\""
   },
   "devDependencies": {
     "@types/react": "^16.0.36",
     "@types/react-dom": "^16.0.3",
     "awesome-typescript-loader": "^3.4.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.1.0",
+    "prettier": "^1.10.2",
     "tslint": "^5.9.1",
     "typescript": "^2.7.0",
     "webpack": "^3.10.0",

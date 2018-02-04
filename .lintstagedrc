@@ -1,0 +1,7 @@
+{
+  "src/**/*.{ts,tsx}": [
+    "yarn prettier:base --write",
+    "yarn lint --fix",
+    "git add"
+  ]
+}
