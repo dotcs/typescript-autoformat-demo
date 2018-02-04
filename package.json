@@ -1,5 +1,6 @@
 {
   "name": "react-clock",
+<<<<<<< HEAD
   "description": "Sample project to demonstrate automated code style with TypeScript",
   "private": true,
   "version": "1.0.0",
@@ -11,6 +12,10 @@
     "url": "https://github.com/dotcs/typescript-autoformat-demo.git",
     "type": "git"
   },
+=======
+  "private": true,
+  "version": "1.0.0",
+>>>>>>> Initial commit
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
