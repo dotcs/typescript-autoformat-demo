@@ -20,12 +20,14 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "lint": "tslint --type-check -p tsconfig.json -c tslint.json"
   },
   "devDependencies": {
     "@types/react": "^16.0.36",
     "@types/react-dom": "^16.0.3",
     "awesome-typescript-loader": "^3.4.1",
+    "tslint": "^5.9.1",
     "typescript": "^2.7.0",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
