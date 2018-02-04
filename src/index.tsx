@@ -2,13 +2,15 @@ import * as React from "react";
 import { render } from "react-dom";
 import { clearInterval } from "timers";
 
-interface ClockState { time: Date; }
+interface ClockState {
+  time: Date;
+}
 
-class Clock extends React.Component<
-  {}, ClockState> {
+class Clock extends React.Component<{}, ClockState> {
   timer: number | null = null;
 
-  state: ClockState = { time: new Date()
+  state: ClockState = {
+    time: new Date()
   };
 
   componentDidMount() {
@@ -16,8 +18,9 @@ class Clock extends React.Component<
   }
 
   componentWillUnmount() {
-    if (this.timer !== null)
+    if (this.timer !== null) {
       window.clearInterval(this.timer);
+    }
   }
 
   updateTime = () => {
@@ -26,13 +29,9 @@ class Clock extends React.Component<
 
   render() {
     const { time } = this.state;
-    const timeString = time
-      .toISOString();
+    const timeString = time.toISOString();
     return <span>{timeString}</span>;
   }
 }
 
-render(
-  <Clock />, 
-  document.getElementById("root")
-);
+render(<Clock />, document.getElementById("root"));
